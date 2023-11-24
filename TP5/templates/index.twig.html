@@ -14,6 +14,24 @@
             {% if etudiant.prénom != "Bob" %}
                 {% if etudiant.nom != "" %}
                     <li>{{ etudiant.prénom }} {{ etudiant.nom }}</li>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Passion de {{etudiant.prenom}} {{etudiant.nom}}</th>
+                                </tr>
+                            </thead>
+                            
+                            <tbody>
+                                <tr>
+                                    {% for passion in etudiant.passions %}
+                                        <td>{{ passion }}</td>
+                                    {% endfor %}
+                                </tr>
+                              </tbody>
+                        </table>
+                        
+                            
+                        
                 {% endif %}
             {% endif %}
         {% endfor %}

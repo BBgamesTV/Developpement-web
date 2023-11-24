@@ -7,9 +7,9 @@ $titre = 'Noms et prénoms des étudiants';
 
 // les données avec noms de famille
 $etudiants = [
-    ['prénom' => 'Alice', 'nom' => 'Doe', 'passion' => ['tennis','vélo','tuto makeup']],
-    ['prénom' => 'Bob', 'nom' => 'Smith', 'passion' => ['natation','cinéma','infromatique']],
-    ['prénom' => 'Eve', 'nom' => 'Johnson', 'passion' => ['live npc','','tuto makeup']],
+    ['prénom' => 'Alice', 'nom' => 'Doe', 'passions' => ['tennis','vélo','tuto makeup']],
+    ['prénom' => 'Bob', 'nom' => 'Smith', 'passions' => ['natation','cinéma','infromatique']],
+    ['prénom' => 'Eve', 'nom' => 'Johnson', 'passions' => ['live npc','php','le flambeau']],
     ['prénom' => 'Malaury'],
 ];
 
