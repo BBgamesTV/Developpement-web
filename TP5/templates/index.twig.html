@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/style.css" rel="stylesheet">
     <title>{{titre}}</title>
 </head>
 
@@ -15,23 +16,12 @@
                 {% if etudiant.nom != "" %}
                     <li>{{ etudiant.prénom }} {{ etudiant.nom }}</li>
                         <table>
-                            <thead>
-                                <tr>
-                                    <th>Passion de {{etudiant.prenom}} {{etudiant.nom}}</th>
-                                </tr>
-                            </thead>
-                            
-                            <tbody>
-                                <tr>
-                                    {% for passion in etudiant.passions %}
-                                        <td>{{ passion }}</td>
-                                    {% endfor %}
-                                </tr>
-                              </tbody>
-                        </table>
-                        
-                            
-                        
+                            <tr><th>Passion de {{etudiant.prenom}} {{etudiant.nom}}</th></tr>
+                            <tr>{% for passion in etudiant.passions %}
+                                    <td>{{ passion }}</td>
+                                {% endfor %}
+                            </tr>
+                        </table>                        
                 {% endif %}
             {% endif %}
         {% endfor %}
