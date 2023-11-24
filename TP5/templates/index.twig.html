@@ -12,17 +12,37 @@
 <body>
     <ul>
         {% for etudiant in etudiants %}
-            {% if etudiant.prénom != "Bob" %}
-                {% if etudiant.nom != "" %}
-                    <li>{{ etudiant.prénom }} {{ etudiant.nom }}</li>
-                        <table>
-                            <tr><th>Passion de {{etudiant.prenom}} {{etudiant.nom}}</th></tr>
-                            <tr>{% for passion in etudiant.passions %}
-                                    <td>{{ passion }}</td>
-                                {% endfor %}
-                            </tr>
-                        </table>                        
-                {% endif %}
+            {% if etudiant.nom != "" %}
+                <li>{{ etudiant.prénom }} {{ etudiant.nom }}</li>
+                <table>
+                    <tr>
+                        <th colspan="3">Passions de {{ etudiant.prénom }} {{ etudiant.nom }}</th>
+                    </tr>
+                    <tr>
+                        {% for passion in etudiant.passions %}
+                        <td>{{ passion }}</td>
+                        {% endfor %}
+                    </tr>
+                </table>
+
+                <table>
+                    <tr>
+                        <th colspan="2">Notes par modules de {{ etudiant.prénom }} {{ etudiant.nom }}</th>
+                    </tr>
+                    <tr>
+                        <th>Modules</th>
+                        <th>Notes</th>
+                    </tr>
+                    {% for module, note in etudiant.notes.modules %}
+                    <tr>
+                        <td>{{ module }}</td>
+                        <td>{{ note }}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+                <br>
+                <br>
+                <br>
             {% endif %}
         {% endfor %}
     </ul>
