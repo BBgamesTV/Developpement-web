@@ -1,0 +1,35 @@
+/* Styles globaux */
+body {
+    font-family: Arial, sans-serif;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+p {
+    font-size: 14px;
+}
+
+/* Styles pour le nom de l'élève */
+td.student-name {
+    font-weight: bold;
+}
+
+/* Styles pour la note moyenne */
+td.average-note {
+    font-weight: bold;
+    color: #f44336;
+}
+
