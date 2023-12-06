@@ -11,7 +11,7 @@ function etudiantAimeCinema($etudiants) {
             if ($passion_test == "cinéma") {
                 echo "$etudiant aime le cinéma";
             }
-            return false
+            return false;
         }
     }
 };
