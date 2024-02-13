@@ -24,6 +24,14 @@
             ?>
         </select></label>
         <input type="submit" name="submit" placeholder="Envoyer">
+        <?php
+
+        if(isset($_GET["err"])) {
+            if($_GET["err"] == 1){
+                echo "<p style='color:red'>Désolé une erreur s’est produite</p>";
+            };
+        };
+        ?>
     </form>
     
     </body>

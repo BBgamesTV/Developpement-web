@@ -9,7 +9,6 @@ if(isset($_POST['submit'])){
     header('location: ./index.php?err=1');
 }
 
-
 include('./fileinput.php')
 ?>
 
@@ -22,7 +21,7 @@ include('./fileinput.php')
         <link href="css/style.css" rel="stylesheet">
     </head>
     <body style="display:block;">
-
+        <p style=color:green;>Merci, vos informations ont bien été enregistrées</p>
         <table>
             <colgroup>
                 <col span="1" style="width: 25%;">
