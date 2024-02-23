@@ -19,7 +19,7 @@
         <h2>Commentaire<sup style="color: red;">*</sup>
         <input type="text" id="Commentaire" name="commentaire" placeholder="Commentaire" required></h2>
 
-        <h2>enseignant<sup style="color: red;">*</sup>
+        <h2>Enseignant<sup style="color: red;">*</sup>
         <select name="enseignant">
             <option value='M.Laserre'>M.Laserre 🛜</option>
             <option value='M.Mofid'>M.Mofid 🔊</option>
@@ -33,7 +33,13 @@
         <?php
         if(isset($_GET["err"])) {
             if($_GET["err"] == 1){
-                echo "<p style='color:red'>Désolé une erreur s’est produite</p>";
+                echo "<p style='color:red'>Désolé une erreur s’est produite.</p>";
+            }
+            elseif($_GET["err"] == 2){
+                echo "<p style='color:red'>Désolé La note ne peut pas etre supérieur a 20.</p>";
+            }
+            elseif($_GET["err"] == 0){
+                echo"<p style='color:green'>OK !</p>";
             };
         };
         ?>
