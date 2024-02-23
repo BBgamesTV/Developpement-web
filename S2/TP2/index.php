@@ -39,7 +39,7 @@
                 echo "<p style='color:red'>Désolé La note ne peut pas etre supérieur a 20.</p>";
             }
             elseif($_GET["err"] == 0){
-                echo"<p style='color:green'>OK !</p>";
+                echo"<p style='color:green'>OK !!</p>";
             };
         };
         ?>
