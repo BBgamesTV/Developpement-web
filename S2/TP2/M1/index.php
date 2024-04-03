@@ -40,6 +40,7 @@
             }
             elseif($_GET["err"] == 0){
                 echo"<p style='color:green'>OK !!</p>";
+                header('location:./tab.php');
             };
         };
         ?>
